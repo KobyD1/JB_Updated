@@ -16,9 +16,9 @@ public class GoogleTest {
         ChromeOptions options = new ChromeOptions();
 
         options.addArguments("--start-maximized");
-        options.setAcceptInsecureCerts(true);
+//        options.setAcceptInsecureCerts(true);
         WebDriverManager.chromedriver().setup();
-        ChromeDriver driver = new ChromeDriver(options);
+        ChromeDriver driver = new  ChromeDriver(options);
 
         driver.get(url);
         WebElement user = driver.findElement(By.id("user-name"));

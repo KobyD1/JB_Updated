@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
             ChromeOptions options = new ChromeOptions();
 
             options.addArguments("--start-maximized");
-            options.setAcceptInsecureCerts(true);
+//            options.setAcceptInsecureCerts(true);
             WebDriverManager.chromedriver().setup();
             ChromeDriver driver = new ChromeDriver(options);
 

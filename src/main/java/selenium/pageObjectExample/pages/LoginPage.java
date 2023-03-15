@@ -12,4 +12,13 @@ public class LoginPage {
         PageFactory.initElements(driver, this);
     }
 
+    public String printUserPw(String user , String pw){
+        System.out.println("The user is "+user + "Pw is "+pw);
+        if (user.length()==4){
+            System.out.println("User length is 4" );
+
+        }
+    return user;
+    }
+
 }

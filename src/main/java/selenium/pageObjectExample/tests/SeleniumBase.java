@@ -5,6 +5,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+
 public class SeleniumBase {
 
 
@@ -13,8 +14,8 @@ public class SeleniumBase {
         ChromeOptions options = new ChromeOptions();
 
         options.addArguments("--start-maximized");
-        options.setAcceptInsecureCerts(true);
-        WebDriverManager.chromedriver().setup();
+//        options.setAcceptInsecureCerts(true);
+        WebDriverManager.firefoxdriver().setup();
         ChromeDriver driver = new ChromeDriver(options);
 
         driver.get(url);
