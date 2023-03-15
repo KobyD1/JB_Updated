@@ -1,4 +1,4 @@
-package selenium.pageObjectExample.pages;
+package selenium.pageObjectExample.tests;
 
 
 import io.github.bonigarcia.wdm.WebDriverManager;
