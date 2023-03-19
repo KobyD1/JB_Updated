@@ -9,13 +9,19 @@ public class ProdPage {
 
     private WebDriver driver;
 
-//    @FindBy(name="q")
-//    WebElement search ;
+    @FindBy(className = "inventory_item_price")
+    WebElement price;
 
-    public ProdPage(WebDriver driver){
-        this.driver=driver;
+    public ProdPage(WebDriver driver) {
+        this.driver = driver;
         PageFactory.initElements(driver, this);
+
     }
 
+    public void getPrice() {
+        String prodPrice = price.getText();
+        System.out.println("Price found it equals to " + prodPrice);
+
+    }
 
 }
