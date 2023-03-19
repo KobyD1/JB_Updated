@@ -14,8 +14,9 @@ public class SeleniumBase {
         ChromeOptions options = new ChromeOptions();
 
         options.addArguments("--start-maximized");
+        options.addArguments("--remote-allow-origins=*");
 //        options.setAcceptInsecureCerts(true);
-        WebDriverManager.firefoxdriver().setup();
+        WebDriverManager.chromedriver().setup();
         ChromeDriver driver = new ChromeDriver(options);
 
         driver.get(url);

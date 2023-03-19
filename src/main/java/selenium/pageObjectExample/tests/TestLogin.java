@@ -2,7 +2,6 @@ package selenium.pageObjectExample.tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import selenium.pageObjectExample.pages.LoginPage;
 import selenium.pageObjectExample.pages.ProdPage;
 
