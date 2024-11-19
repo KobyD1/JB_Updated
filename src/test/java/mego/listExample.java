@@ -17,7 +17,7 @@ public class listExample {
 
         int len = prices.size();
 
-         prices.add("24.5$");
+         prices.add("24.8$");
          prices.add("45.5$");
         prices.add("34.5$");
         prices.add(1,"23.4");
