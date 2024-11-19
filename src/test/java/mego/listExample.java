@@ -16,9 +16,15 @@ public class listExample {
         List<String> prices = new ArrayList<>();
 
         int len = prices.size();
-         String priceNumberOne =  prices.get(1);
+
          prices.add("24.5$");
-         prices.add(2,"45.5$");
+         prices.add("45.5$");
+        prices.add("34.5$");
+        prices.add(1,"23.4");
+
+        String priceNumberOne =  prices.get(1);
+        System.out.println(priceNumberOne);
+
         for (String price:prices){
             System.out.println(price);
 
