@@ -19,7 +19,7 @@ public class listExample {
 
          prices.add("24.8$");
          prices.add("47.5$");
-        prices.add("34.5$");
+        prices.add("37.5$");
         prices.add(1,"23.4");
 
         String priceNumberOne =  prices.get(1);
