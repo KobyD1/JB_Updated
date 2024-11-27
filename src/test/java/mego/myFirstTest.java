@@ -10,6 +10,7 @@ public class myFirstTest {
         int num2 = 3;
         int res = num1/num2;
 
+
             System.out.println("hi , my name is "+myFirstName +" "+ myLastName);
 
 
