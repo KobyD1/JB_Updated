@@ -1,8 +1,9 @@
 package mego.googleSearch.tests;
 
 import mego.googleSearch.pages.resultsPage;
+import mego.googleSearch.pages.welcomePage;
 import mego.page_object_swagLabs.pages.productsPage;
-import mego.page_object_swagLabs.pages.welcomePage;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import seleniumAllJunitAndWait.tests.SeleniumBase;
 
@@ -16,8 +17,7 @@ public class searchForItemTest {
 
         resultsPage resultPageObject = new resultsPage(driver);
         welcomePage welcomePageObject = new welcomePage(driver);
-
-
+        welcomePageObject.searchForItem("Dog");
         base.seleniumClose(driver);
     }
 
