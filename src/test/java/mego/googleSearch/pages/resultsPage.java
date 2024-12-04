@@ -1,5 +1,6 @@
 package mego.googleSearch.pages;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -37,9 +38,20 @@ public void getFirstLinkText(String patternToFind){
     for (WebElement element : results){
         String title = element.getText();
         Boolean isPass = title.contains(patternToFind);
+
         System.out.println("the title is "+title+", the results of the test is  "+isPass);
     }
 
+
 }
+
+    public void assertForFirstLink(String stringToFind){
+        List<WebElement> results = this.driver.findElements(By.className("LC20lb"));
+String firstLinkText = results.get(0).getText();
+        Boolean isPass = firstLinkText.contains(stringToFind);
+        System.out.println("first link text "+firstLinkText);
+        Assert.assertTrue(stringToFind+" is not include in first link text",isPass);
+
+    }
 
 }
