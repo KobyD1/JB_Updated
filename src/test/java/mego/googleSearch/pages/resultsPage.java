@@ -1,10 +1,13 @@
 package mego.googleSearch.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 public class resultsPage {
 
@@ -27,13 +30,16 @@ public class resultsPage {
 }
 
 
-public void getFirstPrice(){
-    String price_as_text = price.getText();
+public void getFirstLinkText(String patternToFind){
+      List<WebElement> results = this.driver.findElements(By.className("LC20lb"));
+      String firstPriceText = results.get(0).getText();
+    System.out.println("the first price is  "+firstPriceText);
+    for (WebElement element : results){
+        String title = element.getText();
+        Boolean isPass = title.contains(patternToFind);
+        System.out.println("the title is "+title+", the results of the test is  "+isPass);
+    }
 
 }
-public void setDropDown(int index ){
-        Select select = new Select(sort);
-        select.selectByIndex(index);
 
-}
 }

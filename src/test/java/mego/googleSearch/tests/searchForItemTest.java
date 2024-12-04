@@ -18,6 +18,7 @@ public class searchForItemTest {
         resultsPage resultPageObject = new resultsPage(driver);
         welcomePage welcomePageObject = new welcomePage(driver);
         welcomePageObject.searchForItem("Dog");
+        resultPageObject.getFirstLinkText("Dog");
         base.seleniumClose(driver);
     }
 
