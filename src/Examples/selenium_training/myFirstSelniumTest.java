@@ -24,7 +24,6 @@ public class myFirstSelniumTest {
             String url = driver.getCurrentUrl();
             assertEquals("https://www.google.com/", url,"Page URL  is not as expected ");
         }
-
         @AfterEach
         public void tearDown() {
                 driver.quit();
