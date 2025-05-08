@@ -11,8 +11,11 @@ public class loginPage {
     @FindBy(id = "user-name")
     WebElement user;
 
-    @FindBy (name = "")
+    @FindBy (name = "password")
     WebElement password ;
+
+    @FindBy(id = "login-button")
+    WebElement loginButton;
 
     private final WebDriver driver;
 
@@ -22,15 +25,13 @@ public class loginPage {
 
     }
 
-   public void clickOnUser(){
-//       System.out.println("Into click on Login");
-//       WebElement login = driver.findElement(By.id("user-name"));
-//       login.click();
- //      login.sendKeys("fdfdfd");
-
+   public void loginWithUserPw(String userText , String pwText){
 
        user.click();
-       user.sendKeys("fdfdfd");
+       user.sendKeys(userText);
+       password.click();
+       password.sendKeys(pwText);
+       loginButton.click();
 
    }
 
